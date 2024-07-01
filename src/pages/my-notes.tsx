@@ -1,11 +1,12 @@
 import { useState } from 'react'
+import Layout from '../components/layout'
 
 function MyNotes(){
     // const [count, setCount] = useState(0)
     return(
-        <>
-            <h1>My Notes Page</h1>
-        </>
+        <Layout>
+            <h1>My Notes</h1>
+        </Layout>
     )
 }
 

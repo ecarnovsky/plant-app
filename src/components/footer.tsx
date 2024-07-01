@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
-function Header(){
+function Footer(){
     return(
         <>
-            <span>header</span>
+            <span>footer</span>
         </>
     )
 }
-export default Header
+export default Footer

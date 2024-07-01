@@ -1,9 +1,10 @@
 import { useState } from 'react'
+import Layout from '../components/layout'
 
  function Home(){
     const [count, setCount] = useState(0)
     return(
-            <>
+        <Layout>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="{viteLogo}" className="logo" alt="Vite logo" />
@@ -24,7 +25,7 @@ import { useState } from 'react'
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </>
+      </Layout>
     )
 }
 

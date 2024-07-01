@@ -10,7 +10,6 @@ import CreateNote from './pages/create-note'
 import MyNotes from './pages/my-notes'
 import Signup from './pages/signup'
 import Login from './pages/login'
-
 function App() {
   const [count, setCount] = useState(0)
 
