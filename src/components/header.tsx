@@ -12,9 +12,22 @@ function Header(){
                         <li><a href="/about">About</a></li>
                     </ul>
                     <a href="/login">Login</a>
+                    <button onClick={logout}>Logout</button>
                 </nav>
             </header>
         </>
     )
 }
 export default Header
+
+
+function logout(){
+    fetch("/.netlify/functions/logout")
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+    })
+    .catch(err => {
+        console.log(`error ${err}`)
+    })
+}
