@@ -11,6 +11,7 @@ function Header(){
                         <li><a href="/mynotes">My Notes</a></li>
                         <li><a href="/about">About</a></li>
                     </ul>
+                    <a href="/login">Login</a>
                 </nav>
             </header>
         </>
