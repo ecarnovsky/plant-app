@@ -3,7 +3,9 @@ import { useState } from 'react'
 function Footer(){
     return(
         <>
-            <span>footer</span>
+            <footer>
+                <small>Made in 2024.</small>
+            </footer>
         </>
     )
 }
