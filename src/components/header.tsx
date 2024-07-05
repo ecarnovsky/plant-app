@@ -1,6 +1,10 @@
-import { useState } from 'react'
+import { useIsLoggedIn, logOut } from '../supabase-auth';
+import AuthForm from '../supabase-auth';
 
 function Header(){
+
+    const isLoggedIn = useIsLoggedIn();
+
     return(
         <>
             <header>
@@ -11,23 +15,17 @@ function Header(){
                         <li><a href="/mynotes">My Notes</a></li>
                         <li><a href="/about">About</a></li>
                     </ul>
-                    <a href="/login">Login</a>
-                    <button onClick={logout}>Logout</button>
+                    {isLoggedIn ? (
+                        <button onClick={logOut}>Logout</button>
+                    ):(
+                        <>
+                        <a href="/login">Login</a> 
+                        <AuthForm/>
+                        </>
+                    )}
                 </nav>
             </header>
         </>
     )
 }
 export default Header
-
-
-function logout(){
-    fetch("/.netlify/functions/logout")
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-    })
-    .catch(err => {
-        console.log(`error ${err}`)
-    })
-}
