@@ -39,6 +39,11 @@ export default function AuthForm(){
 
 }
 
-export function logOut(){
+export async function logOut(){
+
+  const { error } = await supabase.auth.signOut()
+  if(error){
+    console.error(error.message)
+  } 
 
 }
