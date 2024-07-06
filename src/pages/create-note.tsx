@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Layout from '../components/layout'
-import CreatePlant from '../components/create-plant'
+import CreatePlantInputs from '../components/create-plant-inputs'
+import CreateNoteBtn from '../components/create-note-btn'
 
 function CreateNote(){
     const [ numberOfPlants, setPlantNumber ] = useState(1)
@@ -32,20 +33,21 @@ function CreateNote(){
                 <div>
                     <h2>Plant 1</h2>
 
-                        <CreatePlant plantNumber={1}/>
+                        <CreatePlantInputs plantNumber={1}/>
 
                 </div>
 
                 {(numberOfPlants == 2) &&
                 <>
                     <h2>Plant 2</h2>
-                    <CreatePlant plantNumber={2}/>
+                    <CreatePlantInputs plantNumber={2}/>
                 </>
                 }
 
                 <button onClick={setToTwoPlants}>Add Another Plant</button>
 
 
+                <CreateNoteBtn/>
             </form>
         </Layout>
     )

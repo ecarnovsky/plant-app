@@ -1,9 +1,9 @@
 
-interface CreatePlantProps{
+interface CreatePlantInputsProps{
     plantNumber: number
 }
 
-function CreatePlant({plantNumber}: CreatePlantProps){
+function CreatePlantInputs({plantNumber}: CreatePlantInputsProps){
     
     return(
         <>
@@ -29,4 +29,4 @@ function CreatePlant({plantNumber}: CreatePlantProps){
         </>
     )
 }
-export default CreatePlant
+export default CreatePlantInputs
