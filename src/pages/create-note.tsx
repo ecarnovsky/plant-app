@@ -13,6 +13,7 @@ function CreateNote(){
         event.preventDefault()
         setPlantNumber(1)
     } 
+    
     return(
         <Layout>
             <h1>Create Note</h1>

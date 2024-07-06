@@ -1,3 +1,4 @@
+import { supabaseClient } from "../supabase-auth"
 function CreatePlantBtn(){
     return(
         <button onClick={createPlant}>Create Plant</button>
@@ -6,6 +7,6 @@ function CreatePlantBtn(){
 
 export default CreatePlantBtn
 
-export function createPlant(){
+export async function createPlant(){
 
 }
