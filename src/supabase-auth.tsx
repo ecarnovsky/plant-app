@@ -7,7 +7,16 @@ import { Session } from '@supabase/supabase-js'
 
 export const supabaseClient = createClient('https://qmhreacazeduczuzdjby.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFtaHJlYWNhemVkdWN6dXpkamJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTk4OTE0NjksImV4cCI6MjAzNTQ2NzQ2OX0.Q1XbriZC365Ip2smEYhBhivyvfV4hIuNq8XT4JVWQlw')
 
+export async function insertRow(tableName: string, row: object){
+  
+  const { error } = await supabaseClient
+  .from(tableName)
+  .insert([row])
 
+  if(error){
+      console.error(error.message)
+  }
+}
 export function useIsLoggedIn() {
   const [session, setSession] = useState<Session | null>(null)
 

@@ -6,11 +6,9 @@ import CreateNoteBtn from '../components/create-note-btn'
 function CreateNote(){
     const [ numberOfPlants, setPlantNumber ] = useState(1)
     const setToTwoPlants =    () =>{
-        event.preventDefault()
         setPlantNumber(2)
     }  
     const setToOnePlant =    () => {
-        event.preventDefault()
         setPlantNumber(1)
     } 
     
@@ -45,11 +43,12 @@ function CreateNote(){
                 </>
                 }
 
-                <button onClick={setToTwoPlants}>Add Another Plant</button>
-
-
-                <CreateNoteBtn/>
             </form>
+
+            <button onClick={setToTwoPlants}>Add Another Plant</button>
+
+            <CreateNoteBtn/>
+
         </Layout>
     )
 }
