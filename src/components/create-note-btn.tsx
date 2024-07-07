@@ -20,7 +20,7 @@ async function createNote(){
         console.error(authError.message);
     }
 
-    const note = new Note(name, description, user?.id)
+    const note = new Note(name, description, user?.id, undefined, undefined)
 
     insertRow('Note', note)
 
