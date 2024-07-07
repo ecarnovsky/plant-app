@@ -1,10 +1,10 @@
 export default class Plant{
-    name: string
-    description: string
+    name: string | undefined
+    description: string | undefined
     user_id: string | undefined
-    species: string
+    species: string | undefined
 
-    constructor(name:string, description: string, user_id: string | undefined, species: string){
+    constructor(name: string | undefined, description: string | undefined, user_id: string | undefined, species: string | undefined){
         this.name = name
         this.description = description
         this.user_id = user_id
