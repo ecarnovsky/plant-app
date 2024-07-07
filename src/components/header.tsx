@@ -1,5 +1,4 @@
 import { useIsLoggedIn, logOut } from '../supabase-auth';
-import AuthForm from '../supabase-auth';
 
 function Header(){
 
@@ -19,8 +18,7 @@ function Header(){
                         <button onClick={logOut}>Logout</button>
                     ):(
                         <>
-                        <a href="/login">Login</a> 
-                        <AuthForm/>
+                            <a href="/login">Login</a> 
                         </>
                     )}
                 </nav>
